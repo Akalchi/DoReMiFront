@@ -2,13 +2,13 @@
 import './App.css'
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer";
-import HomeView from './components/HomeView.jsx';
+import Piano from './components/PianoView.jsx';
 
 function App() {
   return (
     <div>
       <Header />
-      <HomeView/>
+      <Piano/>
       <Footer />
     </div>
   );
