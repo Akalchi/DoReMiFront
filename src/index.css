@@ -13,6 +13,7 @@ body {
   display: flex;
   position: relative;
   padding-bottom: 88px;
+  position: relative;
 }
 
 .white-key {
@@ -52,6 +53,10 @@ body {
 }
 .Eb5 {
   left: 525px;
+}
+
+.active {
+  background-color: #aaa;
 }
 
 .background-container {
