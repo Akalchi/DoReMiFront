@@ -32,11 +32,11 @@ const Records = () => {
           ESCUCHA TUS GRABACIONES
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl lg:m-60">
           {recordings.map((recording) => (
             <div
               key={recording.id}
-              className="bg-black w-full h-64 sm:h-72 lg:h-80 flex flex-col justify-center items-center text-white rounded-2xl p-4"
+              className="bg-black sm:h-72 lg:h-60 flex flex-col justify-center items-center text-white rounded-2xl p-4"
             >
               <p className="text-base sm:text-lg lg:text-xl font-bold mb-4">{recording.name}</p>
 
