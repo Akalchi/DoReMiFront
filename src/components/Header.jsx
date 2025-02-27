@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="bg-[#141415] py-4 px-6 fixed top-0 left-2 right-2 flex items-center justify-start rounded-[64px] z-50">
       <ul className="flex space-x-4">
         <li>
           <a href="/" className="hover:underline text-xs md:text-sm text-white">
-            Inicio
+          <Link to="/">Inicio</Link>
           </a>
         </li>
         <li>
           <a
             href="/about"
             className="hover:underline text-xs md:text-sm text-white">
-            Instrumentos
+            <Link to="/instruments">Instrumentos</Link>
           </a>
         </li>
         <li>
@@ -19,7 +20,7 @@ export default function Header() {
             href="/contact"
             className="hover:underline text-xs md:text-sm text-white"
           >
-            Grabaciones
+            <Link to="/records">Records</Link>
           </a>
         </li>
       </ul>
