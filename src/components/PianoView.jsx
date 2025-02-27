@@ -6,7 +6,7 @@ const Piano = () => {
 
   // List of keys with their properties
   const keys = [
-    { id: "C4", note: new Audio("src/sounds/C4.mp3"), keyCode: 81 },
+    { id: "DO4", note: new Audio("src/assets/sounds/DO4.mp3"), keyCode: 81 },
     { id: "Db4", note: new Audio("src/sounds/Db4.mp3"), keyCode: 50 },
     { id: "D4", note: new Audio("src/sounds/D4.mp3"), keyCode: 87 },
     { id: "Eb4", note: new Audio("src/sounds/Eb4.mp3"), keyCode: 51 },
@@ -56,7 +56,7 @@ const Piano = () => {
     <main>
       <div className="background-container2 flex flex-col justify-center items-center text-center">
         <div className="bg-[#E06EF1] w-full h-full max-w-[1029px] max-h-[489px] rounded-[32px] overflow-hidden flex flex-col justify-center items-center p-4">
-          <div className="w-[396px] text-center text-[#F5F5F5] text-[56px] font-black leading-[67.20px] break-words m-8">
+          <div className="w-[396px] text-center text-[#ffe8e8] text-[56px] font-black leading-[67.20px] break-words m-8">
             PIANO
           </div>
           <div id="piano">
