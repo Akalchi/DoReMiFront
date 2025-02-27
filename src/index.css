@@ -75,6 +75,14 @@ body {
   min-height: 100vh; 
 }
 
+.background-container3 {
+  background-image: url("../src/assets/img/disk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; 
+}
+
 .bgmodal{
   background-image: url("../src/assets/img/piano.jpg");
   background-repeat: no-repeat;
