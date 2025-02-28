@@ -64,7 +64,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .background-container2 {
@@ -72,7 +72,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .background-container3 {
@@ -80,13 +80,76 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
-.bgmodal{
+.bgmodal {
   background-image: url("../src/assets/img/piano.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh; 
+  min-height: 100vh;
+}
+
+@media (max-width: 640px) {
+  #piano {
+    max-width: 300px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+
+  .white-key {
+    height: 80px;
+    width: 25px;
+    border: 1px solid black;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .black-key {
+    height: 50px;
+    width: 15px;
+    border: 1px solid black;
+    border-radius: 0 0 3px 3px;
+  }
+
+  .text-mobile {
+    width: 200px !important; 
+    font-size: 38px !important;
+    margin: 0 auto; 
+  }
+
+  .mobile-buttons {
+    display: flex; 
+    justify-content: center;
+    margin-top: 16px; 
+  }
+
+  .mobile-buttons button {
+    font-size: 1rem !important;
+    padding: 0.5rem !important; 
+    width: 35px !important; 
+    height: 35px !important; 
+  }
+
+  .Db4 {
+    left: 20px;
+  }
+  .Eb4 {
+    left: 50px;
+  }
+  .Gb4 {
+    left: 100px;
+  }
+  .Ab4 {
+    left: 125px;
+  }
+  .Bb4 {
+    left: 150px;
+  }
+  .Db5 {
+    left: 200px;
+  }
+  .Eb5 {
+    left: 225px;
+  }
 }

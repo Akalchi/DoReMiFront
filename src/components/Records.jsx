@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaPlay, FaPause, FaTrash } from "react-icons/fa";
 
 const Records = () => {
-  // Estado para almacenar las grabaciones (simulado)
   const [recordings, setRecordings] = useState([
     { id: 1, name: "Nombre de grabación", isPlaying: false },
     { id: 2, name: "Nombre de grabación", isPlaying: false },
@@ -28,7 +27,7 @@ const Records = () => {
   return (
     <main>
       <div className="background-container3 flex flex-col justify-center items-center text-center px-4 py-8">
-        <div className="w-full mx-auto text-center text-white text-3xl sm:text-5xl lg:text-6xl font-black leading-tight break-words mb-8">
+        <div className="w-full mx-auto text-center text-white text-3xl sm:text-5xl lg:text-6xl font-black leading-tight break-words mb-8 sm:mt-32">
           ESCUCHA TUS GRABACIONES
         </div>
 
@@ -38,7 +37,9 @@ const Records = () => {
               key={recording.id}
               className="bg-black sm:h-72 lg:h-60 flex flex-col justify-center items-center text-white rounded-2xl p-4"
             >
-              <p className="text-base sm:text-lg lg:text-xl font-bold mb-4">{recording.name}</p>
+              <p className="text-base sm:text-lg lg:text-xl font-bold mb-4">
+                {recording.name}
+              </p>
 
               <div className="flex space-x-4">
                 <button
