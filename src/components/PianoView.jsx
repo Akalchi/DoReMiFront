@@ -4,13 +4,12 @@ import { FaCircle, FaPause, FaSave } from "react-icons/fa";
 
 const Piano = () => {
   const [activeKey, setActiveKey] = useState(null);
-  const [isRecording, setIsRecording] = useState(false); // Estado para grabar
-  const [isPaused, setIsPaused] = useState(false); // Estado para pausar
-  const [elapsedTime, setElapsedTime] = useState(0); // Tiempo transcurrido
-  const [showModal, setShowModal] = useState(false); // Modal de confirmación
-  const [fileName, setFileName] = useState(""); // Nombre del archivo
+  const [isRecording, setIsRecording] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [fileName, setFileName] = useState("");
 
-  // List of keys with their properties
   const keys = [
     { id: "DO4", note: new Audio("src/assets/sounds/DO4.mp3"), keyCode: 81 },
     { id: "Db4", note: new Audio("src/sounds/Db4.mp3"), keyCode: 50 },
@@ -31,21 +30,18 @@ const Piano = () => {
     { id: "E5", note: new Audio("src/sounds/E5.mp3"), keyCode: 80 },
   ];
 
-  // Function to play a note
   const playNote = (audio) => {
     const clone = audio.cloneNode();
     clone.play();
     setTimeout(() => (clone.volume = 0), 2000);
   };
 
-  // Function to handle key press or click
   const pressKey = (id, note) => {
     playNote(note);
     setActiveKey(id);
     setTimeout(() => setActiveKey(null), 100);
   };
 
-  // Global event listener for keyboard keys
   useEffect(() => {
     const handleKeyDown = (event) => {
       const pressedKey = keys.find((key) => key.keyCode === event.keyCode);
@@ -57,7 +53,6 @@ const Piano = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Cronómetro
   useEffect(() => {
     let interval;
     if (isRecording && !isPaused) {
@@ -70,14 +65,12 @@ const Piano = () => {
     return () => clearInterval(interval);
   }, [isRecording, isPaused]);
 
-  // Función para formatear el tiempo
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
 
-  // Funciones de los botones
   const handleRecord = () => {
     if (!isRecording) {
       setIsRecording(true);
@@ -98,8 +91,8 @@ const Piano = () => {
   const handleConfirmSave = () => {
     console.log(`Archivo guardado como: ${fileName}`);
     setShowModal(false);
-    setElapsedTime(0); // Reiniciar el cronómetro
-    setFileName(""); // Limpiar el nombre del archivo
+    setElapsedTime(0);
+    setFileName("");
   };
 
   const handleCancelSave = () => {
@@ -110,11 +103,10 @@ const Piano = () => {
     <main>
       <div className="background-container2 flex flex-col justify-center items-center text-center">
         <div className="bg-[#E06EF1] w-full h-full max-w-[1029px] max-h-[489px] rounded-[32px] overflow-hidden flex flex-col justify-center items-center p-4">
-          <div className="w-[396px] text-center text-[#ffe8e8] text-[56px] font-black leading-[67.20px] break-words m-8">
+          <div className=" text-mobile w-[396px] text-center text-[#ffe8e8] text-[56px] font-black leading-[67.20px] break-words m-8">
             PIANO
           </div>
           <div className="flex">
-            {/* Piano Keys */}
             <div id="piano" className="mr-14">
               {keys.map((key) => (
                 <Key
@@ -127,9 +119,7 @@ const Piano = () => {
               ))}
             </div>
 
-            {/* Buttons Column */}
-            <div className="flex flex-col ml-8 space-y-6"> {/* Aumentamos el margen izquierdo */}
-              {/* Botón de Grabar */}
+            <div className="mobile-buttons flex flex-col ml-8 space-y-6">
               <button
                 className={`text-3xl text-white rounded-full p-2 ${
                   isRecording ? "bg-red-500" : "bg-gray-500"
@@ -140,7 +130,6 @@ const Piano = () => {
                 <FaCircle />
               </button>
 
-              {/* Botón de Pausa */}
               <button
                 className="text-3xl text-white bg-yellow-500 rounded-full p-2 hover:bg-yellow-600"
                 onClick={handlePause}
@@ -149,7 +138,6 @@ const Piano = () => {
                 <FaPause />
               </button>
 
-              {/* Botón de Guardar */}
               <button
                 className="text-3xl text-white bg-green-500 rounded-full p-2 hover:bg-green-600"
                 onClick={handleSave}
@@ -158,7 +146,6 @@ const Piano = () => {
                 <FaSave />
               </button>
 
-              {/* Cronómetro */}
               {isRecording && (
                 <div className="text-white text-lg mt-4">
                   Tiempo: {formatTime(elapsedTime)}
@@ -168,7 +155,6 @@ const Piano = () => {
           </div>
         </div>
 
-        {/* Modal de Confirmación */}
         {showModal && (
           <div className=" bgmodal fixed inset-0 flex items-center justify-center ">
             <div className="bg-white p-6 rounded-lg shadow-lg">
