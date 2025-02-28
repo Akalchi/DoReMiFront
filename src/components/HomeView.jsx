@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export default function HomeView() {
   return (
     <main>
@@ -10,17 +11,21 @@ export default function HomeView() {
 
         <div className="w-full max-w-[505px] bg-white rounded-[16px] overflow-hidden flex justify-center items-center p-4">
           <div className="flex flex-col md:flex-row justify-center items-center gap-[16px] w-full">
-            <button className="flex-1 h-[53px] px-[24px] py-[16px] bg-[#A855F7] rounded-[4px] flex justify-center items-center">
-              <p className="text-center text-[#FAFAFA] text-[14px] md:text-[16px] font-semibold leading-[21px]">
-                Empieza a tocar
-              </p>
-            </button>
+            <Link
+              to="/instruments"
+              className="flex-1 h-[53px] px-[24px] py-[16px] bg-[#A855F7] rounded-[4px] flex justify-center items-center text-center text-[#FAFAFA] text-[14px] md:text-[16px] font-semibold leading-[21px]"
+            >
+              Empieza a tocar
+            </Link>
 
-            <button className="flex-1 h-[53px] px-[24px] py-[16px] rounded-[4px] border border-[#A1A1AA] flex justify-center items-center">
-              <p className="text-center text-[#18181B] text-[14px] md:text-[16px] font-semibold leading-[21px]">
-                Escucha tus grabaciones
-              </p>
-            </button>
+            <Link
+              to="/records"
+              className="flex-1 h-[53px] px-[24px] py-[16px] rounded-[4px] border border-[#A1A1AA] flex justify-center items-center text-center text-[#18181B] text-[14px] md:text-[16px] font-semibold leading-[21px] "
+            >
+              Escucha tus grabaciones
+            </Link>
+
+            
           </div>
         </div>
       </div>

@@ -10,17 +10,17 @@ export default function Header() {
         </li>
         <li>
           <a
-            href="/about"
+            href="/instruments"
             className="hover:underline text-xs md:text-sm text-white">
             <Link to="/instruments">Instrumentos</Link>
           </a>
         </li>
         <li>
           <a
-            href="/contact"
+            href="/records"
             className="hover:underline text-xs md:text-sm text-white"
           >
-            <Link to="/records">Records</Link>
+            <Link to="/records">Grabaciones</Link>
           </a>
         </li>
       </ul>
