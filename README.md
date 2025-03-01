@@ -1,7 +1,7 @@
 
 # Hi Everyone! We're the DoReMi-Devs team! 🎹 🎶
 
-## This project is an interactive plataform to wakne your musical creativity, play, record and share your melodies with the world. Get started now and get the music flowwing!
+## This project is an interactive plataform to waken your musical creativity, play, record and share your melodies with the world. Get started now and get the music flowwing!
 
 ## Status: DONE 🚀
 
@@ -19,7 +19,6 @@ Make sure you have React and Node.js installed
 ## Required documentation 
 - [![Organization](https://img.shields.io/badge/-Jira-0052CC?logo=jira&logoColor=white&style=flat)](https://karinalrg16.atlassian.net/jira/software/projects/SCRUM/boards/1)
 ![Jira](https://github.com/user-attachments/assets/20078dc5-8c36-44fb-b28c-8e89b1050de5)
-
 
 - [![Figma](https://img.shields.io/badge/-Figma-F24E1E?logo=figma&logoColor=white&style=flat)](https://www.figma.com/design/veBM9Qlo7Bwnze7VxLvW2j/Proyectos?node-id=0-1&p=f&t=RxaSIoVc8AEtak0n-0)\
 ![Figma](https://github.com/user-attachments/assets/79542899-89c0-46c1-8531-be2fc3e27ae1)
