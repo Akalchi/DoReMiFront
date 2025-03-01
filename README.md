@@ -1,7 +1,7 @@
 
 # Hi Everyone! We're the DoReMi-Devs team! 🎹 🎶
 
-## This project is an interactive plataform to wakne your musical creativity, play, record and share your melodies with the world. Get started now and get the music flowwing!
+## This project is an interactive plataform to waken your musical creativity, play, record and share your melodies with the world. Get started now and get the music flowwing!
 
 ## Status: DONE 🚀
 
