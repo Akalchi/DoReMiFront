@@ -1,68 +1,155 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  height: 100%;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+#piano {
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  position: relative;
+  padding-bottom: 88px;
+  position: relative;
+}
+
+.white-key {
+  background-color: white;
+  height: 180px;
+  width: 60px;
+  border: 1.5px solid black;
+  border-radius: 0 0 6px 6px;
+}
+
+.black-key {
+  background-color: black;
+  height: 120px;
+  width: 30px;
+  border: 1.5px solid black;
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+}
+
+.Db4 {
+  left: 45px;
+}
+.Eb4 {
+  left: 105px;
+}
+.Gb4 {
+  left: 225px;
+}
+.Ab4 {
+  left: 285px;
+}
+.Bb4 {
+  left: 345px;
+}
+.Db5 {
+  left: 465px;
+}
+.Eb5 {
+  left: 525px;
+}
+
+.active {
+  background-color: #e2d3d8;
+}
+
+.background-container {
+  background-image: url("../src/assets/img/purple-disk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.background-container2 {
+  background-image: url("../src/assets/img/piano.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.background-container3 {
+  background-image: url("../src/assets/img/disk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.bgmodal {
+  background-image: url("../src/assets/img/piano.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 640px) {
+  #piano {
+    max-width: 300px;
+    padding-bottom: 40px;
+    margin: 0 auto;
   }
-  a:hover {
-    color: #747bff;
+
+  .white-key {
+    height: 80px;
+    width: 25px;
+    border: 1px solid black;
+    border-radius: 0 0 4px 4px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .black-key {
+    height: 50px;
+    width: 15px;
+    border: 1px solid black;
+    border-radius: 0 0 3px 3px;
+  }
+
+  .text-mobile {
+    width: 200px !important; 
+    font-size: 38px !important;
+    margin: 0 auto; 
+  }
+
+  .mobile-buttons {
+    display: flex; 
+    justify-content: center;
+    margin-top: 16px; 
+  }
+
+  .mobile-buttons button {
+    font-size: 1rem !important;
+    padding: 0.5rem !important; 
+    width: 35px !important; 
+    height: 35px !important; 
+  }
+
+  .Db4 {
+    left: 20px;
+  }
+  .Eb4 {
+    left: 50px;
+  }
+  .Gb4 {
+    left: 100px;
+  }
+  .Ab4 {
+    left: 125px;
+  }
+  .Bb4 {
+    left: 150px;
+  }
+  .Db5 {
+    left: 200px;
+  }
+  .Eb5 {
+    left: 225px;
   }
 }
